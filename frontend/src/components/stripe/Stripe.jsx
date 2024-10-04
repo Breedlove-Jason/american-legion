@@ -22,7 +22,7 @@ export default function Stripe() {
   const handleCheckout = async () => {
     try {
       const response = await fetch(
-        `${API_URL}/stripe/create-checkout-session`,
+        `${API_URL}/stripe/create-donation-session/`,
         {
           method: 'POST',
           headers: {

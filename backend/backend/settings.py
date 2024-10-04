@@ -20,6 +20,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "https://f86985ba885a.ngrok.app/",
+    "https://5ba7941be2d9.ngrok.app",
+
 
 ]
 
@@ -60,6 +62,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Your React app's URL
     "https://f86985ba885a.ngrok.app",
+    "https://5ba7941be2d9.ngrok.app",
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

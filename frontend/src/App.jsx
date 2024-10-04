@@ -14,10 +14,8 @@ import MembershipPage from '@/pages/MembershipPage.jsx';
 import EventsPage from '@/pages/EventsPage.jsx';
 import SponsorsPage from '@/pages/SponsorsPage.jsx';
 import ScholarshipPage from '@/pages/ScholarshipPage.jsx';
-import PaymentForm from '@/components/stripe/PaymentForm.jsx';
-import PaymentSuccess from '@/components/stripe/PaymentSuccess.jsx';
-import PaymentFailure from '@/components/stripe/PaymentFail.jsx';
-import CheckoutForm from '@/components/forms/checkout/CheckoutForm.jsx';
+import Checkout from '@/components/stripe/Checkout.jsx';
+
 import Stripe from '@/components/stripe/Stripe.jsx';
 
 // Load your Stripe publishable key
@@ -46,7 +44,7 @@ function App() {
                 element={
                   <Elements stripe={stripePromise}>
                     {/*<PaymentForm />*/}
-                    <Stripe />
+                    <Checkout />
                     {/*<CheckoutForm />*/}
                   </Elements>
                 }
