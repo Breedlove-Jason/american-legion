@@ -1,0 +1,14 @@
+.custom-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+.custom-container {
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 25px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}

@@ -1,0 +1,32 @@
+/* Banner.css */
+
+.banner-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-text h1 {
+  font-weight: 700;
+  color: #f8f9fa; /* Light color from Superhero theme */
+}
+
+.banner-text p {
+  font-size: 1.5rem;
+  color: #f8f9fa;
+}

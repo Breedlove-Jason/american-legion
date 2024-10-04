@@ -1,0 +1,66 @@
+### POST request to test ScholarshipForm submission
+POST http://localhost:8000/api/scholarship/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Jane Doe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+456 Elm St, Springfield, USA
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+janedoe@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="phone"
+
+987-654-3210
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="dateOfBirth"
+
+2000-01-01
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="relationship"
+
+Daughter
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="veteranName"
+
+John Doe Sr.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="highSchoolStudents"
+
+500
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="classStudents"
+
+30
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="gpa"
+
+3.8
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="gpaScale"
+
+4.0
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="expectedGraduation"
+
+2024-06-15
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="schoolOfficialName"
+
+Mr. Smith
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="schoolOfficialTitle"
+
+Principal
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="transcript"; filename="transcript.pdf"
+Content-Type: application/pdf
+
+< ../assets/documents/transcript.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

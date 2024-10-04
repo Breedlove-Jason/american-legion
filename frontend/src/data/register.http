@@ -1,0 +1,58 @@
+### POST request to register a user
+POST http://localhost:8000/api/register/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+John
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="first_name"
+
+Doe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="last_name"
+
+jbreedlove@jasonbreedlove.dev
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+jbreedlove
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="username"
+
+916-251-9259
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="phone_number"
+
+1260 Harmony Lane, Auburn, CA. 95603
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+123-456-7890
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="legion_number"
+
+password123
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="password"
+
+password123
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="confirmPassword"
+
+Army
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="branch_of_service"
+
+Global War on Terror
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="era"
+
+< ../assets/documents/transcript.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+-----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="dd214"; filename="dd214.pdf"
+Content-Type: application/pdf
+
+< ../assets/images/legion-logo.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+Content-Disposition: form-data; name="membership_card"; filename="membership_card.png"
+Content-Type: image/png
