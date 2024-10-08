@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
 import NavigationBar from '@/components/navbar/NavigationBar.jsx';
 import HomePage from '@/pages/HomePage.jsx';
 import ContactPage from '@/pages/ContactPage.jsx';
@@ -16,12 +14,8 @@ import SponsorsPage from '@/pages/SponsorsPage.jsx';
 import ScholarshipPage from '@/pages/ScholarshipPage.jsx';
 import Checkout from '@/components/stripe/Checkout.jsx';
 
-import Stripe from '@/components/stripe/Stripe.jsx';
+import NewsPage from "@/pages/NewsPage.jsx";
 
-// Load your Stripe publishable key
-const stripePromise = loadStripe(
-  'pk_test_51PFnMI01foXv66KIhbVeWG24hWrFBnmaiIVcJkEp93TFWYqngYdLp84GGxdeEAbDEHIJwd69vGz4Lhys2K2mcftV00EVE4CCOc',
-);
 
 function App() {
   return (
@@ -39,19 +33,15 @@ function App() {
               <Route path="/events" element={<EventsPage />} />
               <Route path="/sponsors" element={<SponsorsPage />} />
               <Route path="/scholarship" element={<ScholarshipPage />} />
+              <Route path="/news" element={<NewsPage/>}/>
+              <Route path="/login" element={<LoginPage />} />
               <Route
                 path="/payment"
                 element={
-                  <Elements stripe={stripePromise}>
-                    {/*<PaymentForm />*/}
                     <Checkout />
-                    {/*<CheckoutForm />*/}
-                  </Elements>
                 }
               />
-              {/*<Route path="/payment-success" element={<PaymentSuccess />} />*/}
-              {/*<Route path="/payment-failure" element={<PaymentFailure />} />*/}
-              <Route path="/login" element={<LoginPage />} />
+
             </Routes>
           </main>
           <Footer />
