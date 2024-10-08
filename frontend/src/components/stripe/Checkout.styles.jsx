@@ -2,34 +2,6 @@
 
 import styled from 'styled-components';
 import { Button, Form } from 'react-bootstrap';
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  background-color: #2b3e50; /* Superhero dark background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  margin: auto;
-
-  @media (max-width: 768px) {
-    padding: 20px;
-    max-width: 90%; /* Adjust width on smaller screens */
-  }
-`;
-
-// export const Container = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 3rem !important;
-//   padding: 30px;
-//   margin: auto;
-//   //text-align: center;
-//   max-width: 600px;
-// `;
 
 // Container for form and messages
 export const PaymentContainer = styled.div`
@@ -44,6 +16,29 @@ export const PaymentContainer = styled.div`
   @media (max-width: 768px) {
     padding: 20px;
     max-width: 90%; /* Adjust width on smaller screens */
+  }
+`;
+export const Label = styled.label`
+  color: #ffffff; /* Superhero light text */
+  margin-bottom: 5px;
+  display: block;
+
+  @media (max-width: 768px) {
+    font-size: 14px; /* Smaller font on mobile */
+  }
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 8px; /* Reduce padding on smaller screens */
   }
 `;
 

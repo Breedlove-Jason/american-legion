@@ -9,8 +9,9 @@ import {
   StyledForm,
   PayButton,
   Message,
-  Container,
+  Input,
 } from './Checkout.styles.jsx';
+import { Container } from 'react-bootstrap';
 import { API_URL } from '@/config/index.js'; // Adjust the import path as necessary
 
 export default function StripeCheckout() {
@@ -81,43 +82,48 @@ export default function StripeCheckout() {
   };
 
   return (
-    <Container>
-      <PaymentContainer>
-        {message ? (
-          <Message $success>{message}</Message>
-        ) : (
-          <>
-            <PaymentTitle>Support Our Cause</PaymentTitle>
+    <div className={'container'}>
+      <Container
+        className="mt-5 custom-container"
+        style={{ maxWidth: '600px' }}
+      >
+        <PaymentContainer>
+          {message ? (
+            <Message $success>{message}</Message>
+          ) : (
+            <>
+              <PaymentTitle>Support Our Cause</PaymentTitle>
 
-            {/* Membership Dues Section */}
-            <StyledForm>
-              <h3>American Legion Post 84 Dues</h3>
-              <p>Pay your $40 membership dues.</p>
-              <PayButton onClick={handleMembershipCheckout}>
-                Pay Membership Dues
-              </PayButton>
-            </StyledForm>
+              {/* Membership Dues Section */}
+              <StyledForm>
+                <h3>American Legion Post 84 Dues</h3>
+                <p>Pay your $40 membership dues.</p>
+                <PayButton onClick={handleMembershipCheckout}>
+                  Pay Membership Dues
+                </PayButton>
+              </StyledForm>
 
-            {/* Donation Section */}
-            <StyledForm>
-              <h3>Make a Donation</h3>
-              <Form.Group controlId="donationAmount">
-                <Form.Label column={1}>Donation Amount</Form.Label>
-                <Form.Control
-                  type="number"
-                  min="1"
-                  step="0.01"
-                  placeholder="Enter donation amount"
-                  value={donationAmount}
-                  onChange={(e) => setDonationAmount(e.target.value)}
-                />
-                {donationError && <Message>{donationError}</Message>}
-              </Form.Group>
-              <PayButton onClick={handleDonationCheckout}>Donate</PayButton>
-            </StyledForm>
-          </>
-        )}
-      </PaymentContainer>
-    </Container>
+              {/* Donation Section */}
+              <StyledForm>
+                <h3>Make a Donation</h3>
+                <Form.Group controlId="donationAmount">
+                  <Form.Label column={'lg'}>Donation Amount</Form.Label>
+                  <Input
+                    type="number"
+                    min="1"
+                    step="0.01"
+                    placeholder="Enter donation amount"
+                    value={donationAmount}
+                    onChange={(e) => setDonationAmount(e.target.value)}
+                  />
+                  {donationError && <Message>{donationError}</Message>}
+                </Form.Group>
+                <PayButton onClick={handleDonationCheckout}>Donate</PayButton>
+              </StyledForm>
+            </>
+          )}
+        </PaymentContainer>
+      </Container>
+    </div>
   );
 }

@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import { Image } from "react-bootstrap";
 
-// export const HeroImage = styled.div`
-//   width: 100%;
-//   height: auto;
-//   margin-bottom: 20px;
-// `;
-//
+
 export const SectionTitle = styled.h1`
   font-size: 2rem;
   color: #ffffff;
