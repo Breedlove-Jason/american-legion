@@ -1,9 +1,11 @@
-import {News} from "@/components/news/News.styles.jsx";
+import News from '@/components/news/News.jsx';
 
 function NewsPage() {
-    return (
-        <div><News/></div>
-    )
+  return (
+    <div>
+      <News />
+    </div>
+  );
 }
 
-export default NewsPage
+export default NewsPage;
